@@ -311,7 +311,10 @@ hr.star-primary:after {
   width: 320px;
   height: 210px;
   padding: 15px;
+}
 
+.nome-perfil{
+    color: #696969;
 }
 
 /* ###################### Notification Bell dropdown ##################### */

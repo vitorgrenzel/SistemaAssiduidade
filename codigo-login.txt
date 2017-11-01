@@ -1,0 +1,11 @@
+<?php
+        if (count($erro) > 0) {
+            foreach ($erro as $msg) {
+                echo "<p>$msg</p>";
+            }
+        }
+        ?>
+
+
+<input type="text" class="form-control" placeholder="Usuário" name="login" id="UserName" value="<?php echo $_SESSION['login']; ?>">
+                        <i class="fa fa-user"></i>

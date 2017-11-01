@@ -3,13 +3,17 @@
     <head>
         <meta charset="UTF-8">
         <title>IFRS - Campus Ibirubá</title>
+        
         <link rel="stylesheet" href="../css/style.css">
-        <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
-        <link rel="stylesheet" href="../css/estilo-cabecalho.css">
-        <link href="../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
-        <script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
+        <link rel="stylesheet" href="../css/font-awesome.min.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
     </head>
     <body>
+        <?php
+        include ("../classe/protecao.php");
+        protecao();
+        ?>
+        <!-- Barra Brasil -->
         <div id="barra-identidade">
             <div id="barra-brasil">
                 <div id="wrapper-barra-brasil">
@@ -41,10 +45,9 @@
                     <a class="logo-vlibras" href="http://www.vlibras.gov.br/" aria-label="Acessível em Libras"></a>
                 </div>
             </div>
-            <script src="http://barra.brasil.gov.br/barra.js" type="text/javascript" defer="" async=""></script>
         </div>
-        <!-- ############### Cabaçalho #############-->
-
+        
+        <!-- Cabaçalho -->
         <div class="navbar navbar-default">
             <div class="container">
                 <div class="navbar-header" id="barra-navegacao">
@@ -85,13 +88,13 @@
                             <li class="dropdown"> 
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
                                     <img alt="foto de perfil" class="img-circle foto-perfil" src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAliAAAAJDUzNzg0NmI1LTAzODctNDE4ZC05OWU3LTQ4NDYxYTM2ZGM1Ng.jpg" width="40"> 
-                                    <span class="hidden-xs">Vitor Grenzel</span> <br>
+                                    <span class="hidden-xs nome-perfil"><?php echo $_SESSION['nome'] ?></span> <br>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li><a href="#"><i class="fa fa-fw fa-user"></i>Editar Perfil</a></li>
                                     <li><a href="#"><i class="fa fa-fw fa-cog"></i>Alterar senha</a></li>
                                     <li class="divider"></li>
-                                    <li><a href="#"><i class="fa fa-fw fa-power-off"></i>Sair</a></li>
+                                    <li><a href="../php/logout.php"><i class="fa fa-fw fa-power-off"></i>Sair</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -101,130 +104,41 @@
             </div>
         </div>
 
-        <!-- FIM DO CABECALHO -->
-
+        <!-- Corpo -->
         <section  id="corpo-assiduidade">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <h4 class="titulo-cabecalho">Relatorio de programa/projeto de extensão</h4>
+                        <h4 class="titulo-cabecalho">Menu</h4>
                     </div>
                 </div>
                 <div class="col-lg-10 col-lg-offset-1">
                     <div class="row" id="box-cinza">
                         <div class="col-lg-12 text-left">
-                            <h5 class="migalhas-de-pao"><a href="menu-extensao.html">Extensão</a> > <a href="controle-de-relatorio.html">Relatorio</a> > Adicionar</h5>
+                            <h5 class="migalhas-de-pao"><strong>Menu</strong> </h5>
                         </div>
                     </div>
                     <div class="row" id="box-branco">
                         <div class="col-lg-12">
-                            <div class="fieldset cor-de-fundo">
-
-                                <form name="formAssiduidade" class="form-horizontal" id="relatorio-bolsista" action="#" method="POST">
-                                    <div class="form-group">
-                                        <label class="col-sm-4 col-lg-offset-1">Título do programa de extensão:</label><br>
-                                        <div class="col-sm-9 col-lg-offset-2">
-                                            <select name="tituloProj" class="form-control"> 
-                                                <option value="drones">UTILIZAÇÃO DE DRONES COMO FORMA DE AUXILIOS AOS AGRICULTORES DO ALTO JACUI</option>
-                                                <option value="php">SISTEMA DA CANTINA</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-4 col-lg-offset-1" for="#">Relatório: </label>
-                                        <div class="radio">
-                                            <label class="radio-inline">
-                                                <input type="radio" name="optradio">Parcial</label>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="optradio" >Final</label>
-                                        </div>
-                                    </div>
-                                    <br>
-
-                                    <div class="form-group">
-                                        <label class="col-sm-4 col-lg-offset-1" for="comment" >Objetivos alcançados:</label>
-                                        <div class="col-lg-9 col-lg-offset-2">
-                                            <textarea class="form-control" rows="4" ></textarea>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="col-sm-4 col-lg-offset-1" for="comment">Resumo das atividades realizadas:</label>
-                                        <div class="col-lg-9 col-lg-offset-2">
-                                            <textarea class="form-control" rows="4" ></textarea>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="col-sm-4 col-lg-offset-1" for="comment">Dificuldades encontradas:</label>
-                                        <div class="col-lg-9 col-lg-offset-2">
-                                            <textarea class="form-control" rows="4" ></textarea>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- se opção marcada for Relatorio Final, irá aparecer esses campos
-                                    <div class="form-group">
-                                        <label class="col-sm-4 col-lg-offset-1" for="comment">Conclusão:</label>
-                                        <div class="col-lg-9 col-lg-offset-2">
-                                            <textarea class="form-control" rows="4" ></textarea>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="col-sm-4 col-lg-offset-1" for="comment">Perspectivas:</label>
-                                        <div class="col-lg-9 col-lg-offset-2">
-                                            <textarea class="form-control" rows="4" ></textarea>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="col-sm-4 col-lg-offset-1" for="comment">Sugestões:</label>
-                                        <div class="col-lg-9 col-lg-offset-2">
-                                            <textarea class="form-control" rows="4" ></textarea>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="col-sm-4 col-lg-offset-1" for="comment">Publicações:</label>
-                                        <div class="col-lg-9 col-lg-offset-2">
-                                            <textarea class="form-control" rows="4" ></textarea>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="col-sm-4 col-lg-offset-1" for="comment">Outras atividades academicas:</label>
-                                        <div class="col-lg-9 col-lg-offset-2">
-                                            <textarea class="form-control" rows="4" ></textarea>
-                                        </div>
-                                    </div>
-
-                                    =============================================================== -->
+                            <div class="campo-menu">   
+                                <a href="menu-extensao.pho"><input type="submit" class="botao-menu botaoensino" value=""></a>
+                                <a href="menu-extensao.php"><input type="submit" class="botao-menu botaopesquisa" value=""></a>
+                                <a href="menu-extensao.php"><input type="submit" class="botao-menu botaoextensao" value=""></a>
                             </div>
                         </div>
                     </div>
                     <!--     </div> -->
                     <div class="row" id="box-cinza-inferior">
-
-                        <div class="col-lg-offset-1 col-sm-2">
-                            <button onclick="formVazio();" class="btn btn-success">Voltar</button>
-                        </div>
-                        <div class="col-lg-offset-10" >
-                            <button type="submit" class="btn btn-success">Concluir</button>
-                        </div>
-
                     </div>
-
-                    </form>
                 </div>
             </div>
-
-        </section>
-        
-        <script src="../node_modules/jquery/dist/jquery.js"></script>
-        <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+        </div>
+    </section>
 
         <script src="../js/index.js"></script>
-
+        <script src="../js/barra-brasil.js"></script>
+        <script src="../js/jquery-3.2.1.min.js"></script>
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
     </body>
 </html>

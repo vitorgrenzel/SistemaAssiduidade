@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html >
-<head>
-    <meta charset="UTF-8">
-    <title>IFRS - Campus Ibirubá</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
-    <link rel="stylesheet" href="../css/estilo-cabecalho.css">
-    <link href="../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
-    <script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
-</head>
-<body>
-    <div id="barra-identidade">
+    <head>
+        <meta charset="UTF-8">
+        <title>IFRS - Campus Ibirubá</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+        <link rel="stylesheet" href="../css/estilo-cabecalho.css">
+        <link href="../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+        <script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
+    </head>
+    <body>
         <div id="barra-brasil">
             <div id="wrapper-barra-brasil">
                 <div id="brasil-flag">
@@ -84,8 +83,8 @@
                         </li>
                         <li class="dropdown"> 
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
-                                <img alt="foto de perfil" class="img-circle foto-perfil" src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAliAAAAJDUzNzg0NmI1LTAzODctNDE4ZC05OWU3LTQ4NDYxYTM2ZGM1Ng.jpg" width="40"> 
-                                <span class="hidden-xs">Vitor Grenzel</span> <br>
+                                <img alt="foto de perfil" class="img-circle foto-perfil" src="https://cdn.pixabay.com/photo/2012/04/26/19/43/profile-42914_960_720.png"  width="40"> 
+                                <span class="hidden-xs">Luis Claudio Gubert</span> <br>
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a href="#"><i class="fa fa-fw fa-user"></i>Editar Perfil</a></li>
@@ -107,37 +106,87 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h4 class="titulo-cabecalho">Menu</h4>
+                    <h4 class="titulo-cabecalho">Perfil</h4>
                 </div>
             </div>
             <div class="col-lg-10 col-lg-offset-1">
                 <div class="row" id="box-cinza">
                     <div class="col-lg-12 text-left">
-                        <h5 class="migalhas-de-pao"><strong>Menu</strong> </h5>
+                        <h5 class="migalhas-de-pao"><strong>Editar Perfil</strong> </h5>
                     </div>
                 </div>
                 <div class="row" id="box-branco">
                     <div class="col-lg-12">
-                        <div class="campo-menu">   
-                            <a href="menu-extensao.html"><input type="submit" class="botao-menu botaoensino" value=""></a>
-                            <a href="menu-extensao.html"><input type="submit" class="botao-menu botaopesquisa" value=""></a>
-                            <a href="menu-extensao.html"><input type="submit" class="botao-menu botaoextensao" value=""></a>
+                        
+                        <img alt="foto de perfil" class="img-circle center-block" src="https://cdn.pixabay.com/photo/2012/04/26/19/43/profile-42914_960_720.png"  width="200">
+                        
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">Nome:</label>
+                            <div class="col-sm-7"> 
+                                <input type="text" class="form-control" >
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">Data de nascimento:</label>
+                            <div class="col-sm-7"> 
+                                <input type="date" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">E-mail:</label>
+                            <div class="col-sm-7"> 
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">CPF:</label>
+                            <div class="col-sm-7"> 
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">Matricula ou Siape:</label>
+                            <div class="col-sm-7"> 
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-lg-2">Banco:</label>
+                            <div class="col-lg-2"> 
+                                <input type="text" class="form-control">
+                            </div>
+                            <label class="control-label col-lg-2">Agencia:</label>
+                            <div class="col-lg-2"> 
+                                <input type="text" class="form-control">
+                            </div>
+                            <label class="control-label col-lg-2">CC:</label>
+                            <div class="col-lg-2"> 
+                                <input type="text" class="form-control">
+                            </div>
                         </div>
                     </div>
                 </div>
                 <!--     </div> -->
                 <div class="row" id="box-cinza-inferior">
+
+                    <div class="col-lg-offset-1 col-sm-2">
+                        <a href="menu-orientador.html" class="btn btn-success" onClick="formVazio();">Voltar</a>
+                    </div>
+                    <div class="col-lg-offset-10" >
+                        <button type="submit" class="btn btn-success">Concluir</button>
+                    </div>
+
                 </div>
             </div>
-
+            </form>
 
         </div>
     </div>
 </section>
-        <script src="../node_modules/jquery/dist/jquery.js"></script>
-        <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<script src="../node_modules/jquery/dist/jquery.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
 
-        <script src="../js/index.js"></script>
+<script src="../js/index.js"></script>
 
 </body>
 </html>
