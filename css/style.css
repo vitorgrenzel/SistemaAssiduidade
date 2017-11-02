@@ -311,10 +311,7 @@ hr.star-primary:after {
   width: 320px;
   height: 210px;
   padding: 15px;
-}
 
-.nome-perfil{
-    color: #696969;
 }
 
 /* ###################### Notification Bell dropdown ##################### */
@@ -521,12 +518,14 @@ hr.star-primary:after {
       }
       .separador_esq{
         float:left;
-        width: 240px;
-        max-width: 240px;
+        width: 380px;
+        max-width: 380px;
       }
-      .especial_input_exec{
-        position: absolute;
-        right: 0;
-      } 
+      .tam_fix{
+        min-width: 137.73px;  
+      }
+      .tam_fix2{
+        min-width: 206.97px;
+      }
 /* -------------------------------- */
 

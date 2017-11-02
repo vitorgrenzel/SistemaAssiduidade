@@ -1,13 +1,17 @@
+<?php
+if(isset($_GET['c'])){
+  echo "<script>alert('Usuário cadastrado.');</script>";
+}
+?>
 <!DOCTYPE html>
 <html >
     <head>
         <meta charset="UTF-8">
         <title>IFRS - Campus Ibirubá</title>
-        
-        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
         <link rel="stylesheet" href="css/style-login.css">
     </head>
-    <body>    
+    <body>
         <div id="conteiner-login">
             <div id="barra-identidade">
                 <div id="barra-brasil">
@@ -40,33 +44,28 @@
                         <a class="logo-vlibras" href="http://www.vlibras.gov.br/" aria-label="Acessível em Libras"></a>
                     </div>
                 </div>
+                <script src="http://barra.brasil.gov.br/barra.js" type="text/javascript" defer="" async=""></script>
             </div>
-
-
             <div class="login-form">
                 <h1><img id="Logo-if-login" src="imagens/Logo-if-pequeno.png" ></h1>
                 <hr><br>
-
-                <form method="POST" action="php/autentifica.php">
+                <form method="POST" action="#">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Usuário" name="login" id="UserName">
+                        <input type="text" class="form-control" placeholder="Usuário " id="UserName">
                         <i class="fa fa-user"></i>
                     </div>
                     <div class="form-group log-status">
-                        <input type="password" class="form-control" placeholder="Senha" name="senha" id="Passwod">
+                        <input type="password" class="form-control" placeholder="Senha" id="Passwod">
                         <i class="fa fa-lock"></i>
                     </div>
                     <span class="alert">Nome de usuário ou senha errados. Por favor tente outra vez.</span>
-
                     <a class="link" href="pages/esqueceu-senha.html">Esqueceu a senha?</a>
-                    <a class="link-cadastrar" href="pages/cadastro.html">Cadastrar-se</a>
-                    <button type="submit" class="log-btn" >Acessar</button>
+                    <a class="link-cadastrar" href="pages/cadastro.php">Cadastrar-se</a>
+                    <button type="button" class="log-btn" >Acessar</button>
                 </form>
-            </div>           
+            </div>
+            <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+            <script src="js/index.js"></script>
         </div>
-        
-        <script src="js/barra-brasil.js"></script>
-        <script src="js/jquery-3.2.1.min.js"></script>
-        <script src="js/index.js"></script>
     </body>
 </html>
